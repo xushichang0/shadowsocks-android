@@ -32,6 +32,10 @@ A [shadowsocks](http://shadowsocks.org) client for Android, written in Scala.
 
     # Build the App
     sbt native-build clean android:package-release
+
+    # Sign the App
+    keytool -genkey -alias mykey.keystore -keyalg RSA -validity 20000 -keystore mykey.keystore
+	jarsigner -verbose -keystore mykey.keystore -signedjar shadowsocks-release.apk target/android/output/shadowsocks-release-unsigned.apk mykey.keystore
 ```
 
 ## OPEN SOURCE LICENSES
