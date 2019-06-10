@@ -23,6 +23,6 @@ done
 popd
 
 # Build kcptun
-pushd kcptun
-try ./make.bash
-popd
+# pushd kcptun
+# try ./make.bash
+# popd
